@@ -1,8 +1,11 @@
 {
   "name": "gjallarhornjs",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.0",
+  "description": "A library for timing things",
+  "author": "Chris Freeman",
   "license": "MIT",
+  "main": "index.js",
+  "repository": "https://github.com/envoy/gjallarhornjs",
   "scripts": {
     "test": "jest"
   },
