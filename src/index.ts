@@ -80,15 +80,18 @@ export class Timer {
     if (this.hasChildren) {
       this.children.forEach(child => {
         child.clear();
-      })
+      });
     }
   }
 
   toJSON() {
-    let json: TimerJSON = Object.assign({}, {
-      name: this.label,
-      duration: this.value.duration
-    });
+    let json: TimerJSON = Object.assign(
+      {},
+      {
+        name: this.label,
+        duration: this.value.duration,
+      }
+    );
 
     if (this.hasChildren) {
       json.children = this.children.map(child => child.toJSON());

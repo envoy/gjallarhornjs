@@ -52,7 +52,7 @@ describe('Timer.{startChild, stopChild}', () => {
     foo = new Timer('foo');
     foo.start();
     bar = foo.startChild('bar');
-  })
+  });
 
   test('foo should have children after append', () => {
     expect(foo.hasChildren).toBeTruthy();
@@ -67,7 +67,7 @@ describe('Timer.{startChild, stopChild}', () => {
     expect(bar.label).toEqual('foo:bar');
   });
 
-  test("stopping foo should stop all children", () => {
+  test('stopping foo should stop all children', () => {
     expect(foo.stopLabel).toBeFalsy();
     expect(bar.stopLabel).toBeFalsy();
 
@@ -75,9 +75,9 @@ describe('Timer.{startChild, stopChild}', () => {
 
     expect(foo.stopLabel).toEqual('foo-stop');
     expect(bar.stopLabel).toEqual('foo:bar-stop');
-  })
+  });
 
-  test("calling `stopChild` should stop the child without stopping the parent", () => {
+  test('calling `stopChild` should stop the child without stopping the parent', () => {
     expect(foo.stopLabel).toBeFalsy();
     expect(bar.stopLabel).toBeFalsy();
 
