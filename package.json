@@ -7,9 +7,6 @@
   "author": "Chris Freeman",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "yarn clean && yarn ts:all",
     "clean": "rimraf dist",
@@ -24,6 +21,9 @@
     "ts:es": "tsc -p ts/es.tsconfig.json",
     "ts:typedefs": "tsc --emitDeclarationOnly"
   },
+  "files": [
+    "dist"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "yarn format"
