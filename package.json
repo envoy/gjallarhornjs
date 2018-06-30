@@ -1,12 +1,15 @@
 {
   "name": "gjallarhornjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A library for timing things",
   "license": "MIT",
   "repository": "https://github.com/envoy/gjallarhornjs",
   "author": "Chris Freeman",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "yarn clean && yarn ts:all",
     "clean": "rimraf dist",
