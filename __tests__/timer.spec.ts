@@ -1,4 +1,4 @@
-import Timer from '../src/index';
+import { Timer } from '../src/index';
 
 describe('the Timer class', () => {
   let timer = new Timer('testing123');

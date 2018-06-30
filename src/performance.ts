@@ -1,4 +1,4 @@
-import { PerformanceSubset } from './types';
+import { PerformanceSubset } from './timer';
 
 export function performance(): PerformanceSubset {
   if (
