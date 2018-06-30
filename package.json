@@ -1,6 +1,6 @@
 {
   "name": "gjallarhornjs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A library for timing things",
   "license": "MIT",
   "repository": "https://github.com/envoy/gjallarhornjs",
@@ -12,14 +12,14 @@
     "clean": "rimraf dist",
     "format": "yarn lint --fix && yarn format-package --write",
     "lint": "eslint src/*.ts __tests__/*.ts",
+    "postublish": "yarn clean",
+    "prepublishOnly": "yarn test && yarn build",
     "test": "jest && yarn lint",
     "test:watch": "jest --watch",
     "ts:all": "yarn ts:cjs && yarn ts:es && yarn ts:typedefs",
     "ts:cjs": "tsc -p ts/cjs.tsconfig.json",
     "ts:es": "tsc -p ts/es.tsconfig.json",
-    "ts:typedefs": "tsc --emitDeclarationOnly",
-    "prepublishOnly": "yarn test && yarn build",
-    "postublish": "yarn clean"
+    "ts:typedefs": "tsc --emitDeclarationOnly"
   },
   "husky": {
     "hooks": {
