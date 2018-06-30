@@ -17,7 +17,9 @@
     "ts:all": "yarn ts:cjs && yarn ts:es && yarn ts:typedefs",
     "ts:cjs": "tsc -p ts/cjs.tsconfig.json",
     "ts:es": "tsc -p ts/es.tsconfig.json",
-    "ts:typedefs": "tsc --emitDeclarationOnly"
+    "ts:typedefs": "tsc --emitDeclarationOnly",
+    "prepublishOnly": "yarn test && yarn build",
+    "postublish": "yarn clean"
   },
   "husky": {
     "hooks": {
