@@ -253,6 +253,10 @@ This version will give the exact same output as the previous timer code, but it 
 - All `Timer` instances have a `toJSON` method that will give you a JSON representation of the Timer tree you've created, using itself as the root.
 - All `Timer` instances have a `clear` method which will wipe away all the performance measures and marks. Usually you want to use this right before the code you're timing finishes executing (but make sure you do this *after* you've used the timing data!)
 
+## Credit
+
+This library is heavily inspired by [heimdalljs](https://github.com/heimdalljs/heimdalljs-lib), specifically its use of tree structures. In fact, the name (gjallarhorn) is a reference to this inspiration.
+
 ## Installation
 
 `yarn add gjallarhornjs`
